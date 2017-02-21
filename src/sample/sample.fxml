@@ -11,9 +11,9 @@
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="text" promptText="Name" />
-            <TextField fx:id="text" promptText="Phone Number #" />
-            <TextField promptText="Email" />
+            <TextField fx:id="textName" promptText="Name" />
+            <TextField fx:id="textPhone" promptText="Phone Number #" />
+            <TextField fx:id="textEmail" promptText="Email" />
             <Button mnemonicParsing="false" onAction="#addItem" text="Add" />
             <Button mnemonicParsing="false" onAction="#removeItem" prefHeight="27.0" prefWidth="79.0" text="Remove" />
          </children>
