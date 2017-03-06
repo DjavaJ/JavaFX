@@ -4,9 +4,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-import javax.swing.text.html.ListView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,7 +17,7 @@ public class Controller implements Initializable {
 
 
     @FXML
-    ListView setItem;
+    ListView list;
 
     @FXML
     TextField textName;
@@ -30,19 +30,25 @@ public class Controller implements Initializable {
 
     public void addItem(){
     System.out.println("addItem");
-        contacts.add(new Contact (textName.getText(textPhone textEmail));
-        textName.setText("");
+
+    if (textName.getText().isEmpty()||textPhone.getText().isEmpty()||textEmail.getText().isEmpty()){
+
+    } else{
+        contacts.add(new Contact (textName.getText(), textPhone.getText(), textEmail.getText()));
+    }
+        textName.setText("text");
+        textPhone.setText("text");
+        textEmail.setText("text");
     }
 
     public void removeItem(){
         //System.out.println("removeItem");
-        contacts.remove(new Contact (textName.getText(textPhone textEmail));
-        textName.setText("");
+        contacts.remove(new Contact (textName.getText(), textPhone.getText (),textEmail.getText()));
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        setItem.text(contacts);
+        list.setItems(contacts);
     }
 
 

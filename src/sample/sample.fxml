@@ -6,18 +6,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="textName" promptText="Name" />
+            <TextField fx:id="textName" promptText="Name" HBox.hgrow="ALWAYS" />
             <TextField fx:id="textPhone" promptText="Phone Number #" />
             <TextField fx:id="textEmail" promptText="Email" />
             <Button mnemonicParsing="false" onAction="#addItem" text="Add" />
             <Button mnemonicParsing="false" onAction="#removeItem" prefHeight="27.0" prefWidth="79.0" text="Remove" />
          </children>
       </HBox>
-      <ListView fx:id="setItems" prefHeight="300.0" prefWidth="595.0" />
+      <ListView fx:id="list" prefHeight="300.0" prefWidth="595.0" />
    </children>
 </VBox>

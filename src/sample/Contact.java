@@ -1,6 +1,5 @@
 package sample;
 
-import static java.awt.SystemColor.text;
 
 /**
  * Created by dangelojoyce on 2/21/17.
@@ -44,7 +43,7 @@ public class Contact {
 
     @Override
     public String toString(){
-        return text + (name + " , " +   phoneNumber + ", " + email +", " ); //concatenating done or not based on the value of isDone variable +
+        return (name + " , " +   phoneNumber + ", " + email); //concatenating done or not based on the value of isDone variable +
     }
 
 }
